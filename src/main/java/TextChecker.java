@@ -1,26 +1,38 @@
 public class TextChecker {
     public static void main(String[] args) {
-        getTextInfo("oko");
-        getTextInfo("koko");
+
+        showTextInfo("oko");
+
     }
 
-    public static void getTextInfo(String text){
-        if (text.isBlank()){
-            System.out.println("There is no text!");
+    public static boolean isTextBlank(String text) {
+        if (text.isBlank()) {
+            return true;
         }
-
-        String reverse = "";
-        int length = text.length();
-        if (!(text.isBlank())){
-            for (int i = length -1; i >= 0; i--)
+        return false;
+    }
+    public static void isTextPalindrome(String text){
+        if (!(text.isBlank())) {
+            String reverse = "";
+            int length = text.length();
+            for (int i = length - 1; i >= 0; i--)
                 reverse = reverse + text.charAt(i);
-            if(text.equals(reverse))
+            if (text.equals(reverse))
                 System.out.println(text + " is a palindrome");
             else {
                 System.out.println(text + " is not a palindrome");
             }
-
-            System.out.println("Text length is " + text.length() + " characters \n");
         }
+    }
+    public static void howLongIsText(String text){
+        if (!(text.isBlank())){
+            System.out.println("Length of text is: " + text.length());
+        }
+
+    }
+    public static void showTextInfo (String text){
+        isTextBlank(text);
+        isTextPalindrome(text);
+        howLongIsText(text);
     }
 }
