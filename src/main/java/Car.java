@@ -1,4 +1,4 @@
-public class Car extends Vehicle{
+public class Car extends EngineVehicle{
 
     @Override
     protected void startEngine() {

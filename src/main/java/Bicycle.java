@@ -1,3 +1,3 @@
-public class Bicycle extends NonEngineVehicle{
+public class Bicycle extends Vehicle {
 
 }
