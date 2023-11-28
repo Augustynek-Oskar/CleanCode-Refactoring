@@ -13,7 +13,8 @@ public class Vehicle {
         }
     }
 
-    public boolean isEngineStarted() {
+    protected boolean isEngineStarted() {
         return engineStarted;
     }
+
 }
